@@ -1,0 +1,15 @@
+# Credenciais e tokens OAuth
+secret.json
+token.json
+ 
+# Logs
+*.log
+ 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+ 
