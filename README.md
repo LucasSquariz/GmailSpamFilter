@@ -1,4 +1,4 @@
-# :email: Automated Gmail Spam Classifier
+# :email: Filtro de spam no Gmail automatizado
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Concluído-success.svg)
