@@ -95,7 +95,7 @@ def contains_spam_phrase(text):
             return phrase
     return None
 
-
+#Extrai e retorna o texto completo de um e-mail, decodificando e limpando HTML.
 def extract_body(part):
     result = ""
     mime = part.get("mimeType", "")
@@ -110,8 +110,8 @@ def extract_body(part):
         result += extract_body(subpart)
     return result
 
-def mark_as_spam(service, msg_id):
-    """Move o email para SPAM (adiciona label SPAM, remove INBOX)."""
+#Move o email para SPAM (adiciona label SPAM, remove INBOX).
+def mark_as_spam(service, msg_id):    
     service.users().messages().modify(
         userId="me",
         id=msg_id,
@@ -121,18 +121,17 @@ def mark_as_spam(service, msg_id):
         },
     ).execute()
 
-
+#Função principal que executa todas as anteriores além de armazenar em logs todo o processo. 
 def run_filter():
     log.info("=" * 50)
     log.info(f"Iniciando verificação — {datetime.now().strftime('%d/%m/%Y %H:%M')}")
 
     service = authenticate()
-
-    # Busca apenas emails na INBOX que não estão já marcados como SPAM
+   
     results = service.users().messages().list(
         userId="me",
         labelIds=["INBOX"],
-        maxResults=100,  # processa até 10 por execução
+        maxResults=100, 
     ).execute()
 
     messages = results.get("messages", [])
