@@ -1,0 +1,31 @@
+name: Gmail Spam Filter
+
+on:
+  schedule:
+    - cron: "0 11,23 * * *"  # 08h e 20h no horário de Brasília (UTC-3)
+  workflow_dispatch:          
+
+jobs:
+  run-filter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: |
+          python -m venv venv
+          venv/bin/pip install -r requirements.txt
+
+      - name: Criar arquivos de credenciais
+        run: |
+          echo '${{ secrets.GMAIL_CREDENTIALS }}' > credentials.json
+          echo '${{ secrets.GMAIL_TOKEN }}' > token.json
+
+      - name: Executar filtro
+        run: venv/bin/python spam_filter.py
