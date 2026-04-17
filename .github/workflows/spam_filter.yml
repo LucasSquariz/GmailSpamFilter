@@ -24,7 +24,7 @@ jobs:
 
       - name: Criar arquivos de credenciais
         run: |
-          echo '${{ secrets.GMAIL_CREDENTIALS }}' > credentials.json
+          echo '${{ secrets.GMAIL_CREDENTIALS }}' > secret.json
           echo '${{ secrets.GMAIL_TOKEN }}' > token.json
 
       - name: Executar filtro
