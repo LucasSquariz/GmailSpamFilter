@@ -1,4 +1,3 @@
-![Gmail](gmail_icon.png)
 # :email: Filtro de spam no Gmail
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
