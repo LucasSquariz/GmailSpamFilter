@@ -15,7 +15,8 @@ SPAM_PHRASES = [
     "decidimos seguir com",
     "optamos por seguir com outro(a)",
     "a posição não está mais disponível",
-    "informamos que você não foi"    
+    "você não foi aprovado(a)",
+    "você não foi selecionado(a)"    
 ]
 
 # ─────────────────────────────────────────────
