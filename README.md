@@ -1,4 +1,4 @@
-# :email: Filtro de spam no Gmail
+# :email: Filtro de spam no Gmail automatizado
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Concluído-success.svg)
@@ -6,7 +6,7 @@
 ---
 
  ## :mailbox_with_mail: Sobre 
-Este projeto foi desenvolvido com o objetivo de aprimorar a filtragem de e-mails indesejados em contas do Gmail. Embora a plataforma já disponha de mecanismos nativos de detecção de spam, esta aplicação permite a personalização do processo por meio da definição de frases específicas a serem identificadas no corpo das mensagens.
+Este projeto foi desenvolvido com o objetivo de aprimorar a filtragem de e-mails indesejados em contas do Gmail de forma automatizada. Embora a plataforma já disponha de mecanismos nativos de detecção de spam, esta aplicação permite a personalização do processo por meio da definição de frases específicas a serem identificadas no corpo das mensagens.
 
 A partir dessas regras personalizadas, e-mails que contenham determinados padrões são automaticamente direcionados para a caixa de spam. No contexto deste projeto, foram utilizadas como base frases comumente presentes em respostas automáticas de processos seletivos que indicam reprovação, como: “não daremos seguimento à sua candidatura” e “decidimos seguir com outros candidatos”.
 
